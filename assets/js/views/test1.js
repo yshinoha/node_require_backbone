@@ -4,6 +4,9 @@ define(["jquery", "underscore", "backbone"], function() {
     el: 'body',
     defaults: {
     },
+    event: {
+      'click aa': 'test'
+    },
     initialize: function() {
       console.log('testView1のnewです。');
     },

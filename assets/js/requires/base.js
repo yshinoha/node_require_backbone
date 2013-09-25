@@ -11,16 +11,8 @@ requirejs.config({
       }
     },
     paths: {
-      jquery: [
-        '//code.jquery.com/jquery-1.10.2',
-        '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
-        'lib/jquery'
-      ],
-      underscore: [
-        "//underscorejs.org/underscore-min"
-      ],
-      backbone: [
-        "//backbonejs.org/backbone-min"
-      ]
+      jquery: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
+      underscore: "//underscorejs.org/underscore-min",
+      backbone: "//backbonejs.org/backbone-min"
     }
 });

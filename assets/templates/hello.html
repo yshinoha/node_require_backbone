@@ -1,8 +1,9 @@
-JSTテスト
-<%- test %>
-<%- test %>
+JSTテンプレートが読み込まれました。<br>
 
-<% _.each(list,function(data) { %>
-  <%- data.test %><br>
-  <%- data.test %><br>
+私の名前は、「<%- user.name %>」です。<br>
+
+
+全部の情報を公開すると
+<% _.each(user, function(val, key) { %>
+  <%- val %> = <%- key %><br>
 <% }); %>

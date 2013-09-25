@@ -7,16 +7,14 @@ obj || (obj = {});
 var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 with (obj) {
-__p += 'JSTテスト\n' +
-__e( test ) +
-'\n' +
-__e( test ) +
-'\n\n';
- _.each(list,function(data) { ;
+__p += 'JSTテンプレートが読み込まれました。<br>\n\n私の名前は、「' +
+__e( user.name ) +
+'」です。<br>\n\n\n全部の情報を公開すると\n';
+ _.each(user, function(val, key) { ;
 __p += '\n  ' +
-__e( data.test ) +
-'<br>\n  ' +
-__e( data.test ) +
+__e( val ) +
+' = ' +
+__e( key ) +
 '<br>\n';
  }); ;
 __p += '\n';

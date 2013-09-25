@@ -1,1 +1,15 @@
-console.log('view');
+console.log('views/view.jsが読み込まれました。');
+define(["jquery", "underscore", "backbone"], function() {
+  return Backbone.View.extend({
+    el: 'body',
+    defaults: {
+    },
+    initialize: function() {
+      console.log('Userのnewです。');
+    },
+    render: function() {
+      var user = this.model.attributes;
+      $('body').html(JST['hello']({user: user}));
+    }
+  });
+});
