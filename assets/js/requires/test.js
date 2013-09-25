@@ -3,7 +3,7 @@ console.log('一番最初に実行されます。');
 //依存モジュールを非同期ローディング
 
 require([
-    "assets/jst/templates",
+    "jst/templates",
     "views/test1",
     "views/test2",
     "models/test"

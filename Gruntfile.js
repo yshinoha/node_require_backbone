@@ -1,8 +1,28 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-
     pkg: grunt.file.readJSON('package.json'),
+    watch: {
+      build: {
+        files: 'assets/js/**',
+        tasks: ['requirejs']
+      },
+      jst: {
+        files: 'assets/templates/**/*.html',
+        tasks: ['jst']
+      }
+    },
+
+    requirejs: {
+      compile_top: {
+        options: {
+          name : 'requires/test',  // mainで読み込むjsのpath
+          baseUrl: "assets/js/",
+          mainConfigFile: "assets/js/requires/base.js",
+          out: "aaaaaaaa.js"
+        }
+      }
+    },
 
     jst: {
       compile: {
@@ -16,10 +36,10 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'assets/jst/templates.js': [
+          'assets/js/jst/templates.js': [
             'assets/templates/**/*.html'
           ],
-          'assets/jst/common.js': [
+          'assets/js/jst/common.js': [
             'assets/templates/**/*.html'
           ]
         }
@@ -29,4 +49,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jst');
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 }

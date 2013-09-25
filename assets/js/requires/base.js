@@ -1,5 +1,6 @@
 requirejs.config({
     //To get timely, correct error triggers in IE, force a define/shim exports check.
+    baseUrl: "assets/js/",
     enforceDefine: true,
     shim: {
       'jquery': { exports: '$' },
@@ -12,7 +13,8 @@ requirejs.config({
     paths: {
       jquery: [
         '//code.jquery.com/jquery-1.10.2',
-        '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min'
+        '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
+        'lib/jquery'
       ],
       underscore: [
         "//underscorejs.org/underscore-min"

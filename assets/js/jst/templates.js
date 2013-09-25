@@ -9,9 +9,13 @@ function print() { __p += __j.call(arguments, '') }
 with (obj) {
 __p += 'JSTテスト\n' +
 __e( test ) +
+'\n' +
+__e( test ) +
 '\n\n';
  _.each(list,function(data) { ;
 __p += '\n  ' +
+__e( data.test ) +
+'<br>\n  ' +
 __e( data.test ) +
 '<br>\n';
  }); ;
