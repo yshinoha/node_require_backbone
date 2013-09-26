@@ -10,6 +10,10 @@ module.exports = function(grunt) {
       jst: {
         files: 'assets/templates/**/*.html',
         tasks: ['jst']
+      },
+      jshint: {
+        files: '<%= target %>',
+        tasks: ['jshint']
       }
     },
 
@@ -19,7 +23,7 @@ module.exports = function(grunt) {
           name : 'requires/test',  // mainで読み込むjsのpath
           baseUrl: "assets/js/",
           mainConfigFile: "assets/js/requires/base.js",
-          out: "aaaaaaaa.js"
+          out: "assets/js/min/aaaaaaaa.js"
         }
       }
     },
@@ -44,12 +48,32 @@ module.exports = function(grunt) {
           ]
         }
       }
-    }
+    },
 
+    jshint: {
+       all: {
+         src: '<%= target %>'
+       },
+       watch: {
+         src: '<%= grunt.regarde.changed %>'
+       },
+       options: {
+         jshintrc: '.jshintrc'
+       }
+     },
+
+     target: [
+      'assets/js/models/*.js',
+      'assets/js/requires/*.js',
+      'assets/js/views/*.js',
+      '!assets/js/jst/**/*.js'
+    ],
   });
 
   grunt.loadNpmTasks('grunt-contrib-jst');
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
+
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 }

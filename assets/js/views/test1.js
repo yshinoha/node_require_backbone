@@ -1,5 +1,5 @@
 console.log('views/test1.jsが読み込まれました。');
-define(["jquery", "underscore", "backbone"], function() {
+define(['jquery', 'underscore', 'backbone'], function() {
   var testView1 = Backbone.View.extend({
     el: 'body',
     defaults: {

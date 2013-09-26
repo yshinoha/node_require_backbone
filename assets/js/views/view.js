@@ -1,5 +1,5 @@
 console.log('views/view.jsが読み込まれました。');
-define(["jquery", "underscore", "backbone"], function() {
+define(['jquery', 'underscore', 'backbone'], function() {
   return Backbone.View.extend({
     el: 'body',
     defaults: {
@@ -8,8 +8,8 @@ define(["jquery", "underscore", "backbone"], function() {
       console.log('Userのnewです。');
     },
     render: function() {
-      var user = this.model.attributes;
-      $('body').html(JST['hello']({user: user}));
+      //var user = this.model.attributes;
+      /*$('body').html(JST['hello']({user: user}));*/
     }
   });
 });

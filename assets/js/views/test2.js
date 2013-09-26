@@ -1,13 +1,13 @@
 console.log('views/test2.jsが読み込まれました。');
 
-define(["jquery", "underscore", "backbone"], function() {
+define(['jquery', 'underscore', 'backbone'], function() {
   return Backbone.View.extend({
     el: 'body',
     defaults: {},
     initialize: function() {
-console.log('========================');
-console.log(this);
-console.log('========================');
+      console.log('========================');
+      console.log(this);
+      console.log('========================');
       console.log('testView2のnewです。');
     },
     render: function() {

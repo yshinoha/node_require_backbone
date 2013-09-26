@@ -7,9 +7,9 @@ obj || (obj = {});
 var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
 function print() { __p += __j.call(arguments, '') }
 with (obj) {
-__p += 'JSTテンプレートが読み込まれました。<br>\n\n私の名前は、「' +
+__p += 'JSTテンプレートが読み込まれました。<br>\n<br>\n私の名前は、「' +
 __e( user.name ) +
-'」です。<br>\n\n\n全部の情報を公開すると\n';
+'」です。<br>\n<br>\n全部の情報を公開すると<br>\n';
  _.each(user, function(val, key) { ;
 __p += '\n  ' +
 __e( val ) +
