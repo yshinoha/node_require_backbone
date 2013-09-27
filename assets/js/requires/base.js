@@ -7,7 +7,7 @@ requirejs.config(
     shim: {
       'jquery': { exports: '$' },
       'underscore': { exports: '_' },
-      'backbone': {
+      'Backbone': {
         deps: ['jquery', 'underscore'],
         exports: 'Backbone'
       }
@@ -15,7 +15,7 @@ requirejs.config(
     paths: {
       jquery: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
       underscore: '//underscorejs.org/underscore-min',
-      backbone: '//backbonejs.org/backbone-min'
+      Backbone: '//backbonejs.org/backbone-min'
     }
   }
 );

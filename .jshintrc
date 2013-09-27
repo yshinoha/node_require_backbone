@@ -43,6 +43,7 @@
     "location",
     "require",
     "requirejs",
-    "define"
+    "define",
+    "JST"
   ]
 }

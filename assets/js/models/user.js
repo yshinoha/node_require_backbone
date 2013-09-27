@@ -1,5 +1,5 @@
 console.log('models/user.jsが読み込まれました。');
-define(['jquery', 'underscore', 'backbone'], function() {
+define(['Backbone'], function() {
   return Backbone.Model.extend({
     defaults: {
       name: 'no name',
@@ -10,12 +10,6 @@ define(['jquery', 'underscore', 'backbone'], function() {
       this.name = attrs.name;
       this.nickname = attrs.nickname;
       this.age = attrs.age;
-
-      /*
-      this.bind('change:text', function (model, val) {
-          //console.log(model.previous('text'), val);
-      });
-      */
     }
   });
 });
